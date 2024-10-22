@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     background-color: transparent;
     position: fixed;
+    padding-left: 20%;
     top: 10%;
     right: 0; /* Align the entire mobile menu to the right */
     width: 50%; /* Adjust the width as needed */
