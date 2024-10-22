@@ -61,12 +61,35 @@ body {
     .hamMenu {
         display: block; /* Show hamburger icon */
     }
+
+    .mobile-menu {
+        display: flex; /* Show mobile menu, initially hidden */
+        flex-direction: column; /* Ensure buttons stack vertically */
+        display: none; /* Hide the mobile menu by default */
+    }
+
+    .mobile-menu button {
+        display: block; /* Show buttons in mobile menu */
+    }
 }
+
 
 /* Media query for large screens */
 @media screen and (min-width: 769px) {
     .hamMenu {
         display: none; /* Hide hamburger menu */
+    }
+
+    .mobile-menu {
+        display: none; /* Hide mobile menu */
+    }
+
+    .tab {
+        display: flex; /* Show desktop buttons */
+    }
+
+    .mobile-menu button {
+        display: none;
     }
 }
 
