@@ -76,7 +76,7 @@ function scrollToSection(sectionID){
 
 //text appear as you scroll
 document.addEventListener("DOMContentLoaded", function(){
-	const elements = document.querySelectorAll(".slides, .contact");
+	const elements = document.querySelectorAll(".slides, .slideText, .contact");
 
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
