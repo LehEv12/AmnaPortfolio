@@ -61,6 +61,13 @@ body {
     }
 }
 
+/* Media query for large screens */
+@media screen and (min-width: 769px) {
+    .hamMenu {
+        display: none; /* Hide hamburger menu */
+    }
+}
+
 .header {
     padding: 10px;
     background: none;
