@@ -38,6 +38,9 @@ body {
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(5px); /* Move content down initially */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 h1{
@@ -71,4 +74,9 @@ hr {
 
 .tab{
     color: black;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Content comes back to its original position */
 }
