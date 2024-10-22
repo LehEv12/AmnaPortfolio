@@ -32,7 +32,7 @@
 
 	<div class="title">
 		<p><h1>Amna Faheem</h1></p>
-		<img src="mainImage/wubbzy.jpg" alt="Amna Picture">
+		<img class="image" src="mainImage/wubbzy.jpg" alt="Amna Picture">
 	</div>
 
 	<div class="container">
@@ -76,7 +76,7 @@ function scrollToSection(sectionID){
 
 //text appear as you scroll
 document.addEventListener("DOMContentLoaded", function(){
-	const elements = document.querySelectorAll(".slides, .slideText, .contact");
+	const elements = document.querySelectorAll(".slides, .image, .slideText, .contact");
 
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
