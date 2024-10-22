@@ -12,6 +12,18 @@
 </head>
 
 <body>
+	<div class ='hamMenu' onclick="toggleMenu()">
+		&#9776; <!-- Hamburger icon (three horizontal lines) -->
+	</div>
+
+	<!-- Mobile Menu -->
+	<div id="mobileMenu" class="mobile-menu">
+		<button class="tablinks" onclick="scrollToSection('intro')">Introduction</button>
+		<button class="tablinks" onclick="scrollToSection('aboutMe')">About Me</button>
+		<button class="tablinks" onclick="scrollToSection('work')">My Work</button>
+		<button class="tablinks" onclick="scrollToSection('contact')">Contact</button>
+	</div>
+
 	<div class="header">
 		<div class="tab">
 			<button class="tablinks" onclick="scrollToSection('intro')">Introduction</button>
@@ -30,37 +42,39 @@
 		</div>
 	</div>
 
-	<div class="title">
-		<p><h1>Amna Faheem</h1></p>
-		<img src="mainImage/wubbzy.jpg" alt="Amna Picture">
-	</div>
-
 	<div class="container">
-		<div class="slides" id="intro">
-			<h2>Intro</h2>
-			<hr>
-			<div class="slideText">
-				blah, blah blah blah blah. Blah blah!
+		<div class="title">
+			<p><h1>Amna Faheem</h1></p>
+			<img src="mainImage/wubbzy.jpg" alt="Amna Picture">
+		</div>
+
+		<div class="slideContainer">
+			<div class="slides" id="intro">
+				<h2>Intro</h2>
+				<hr>
+				<div class="slideText">
+					blah, blah blah blah blah. Blah blah!
+				</div>
 			</div>
-		</div>
 
-		<div class="slides" id="aboutMe">
-			<h2>About Me</h2>
-			<hr>
-			<div class="slideText">
-				blah blah blah, blah blah, blah blah blah blah!
+			<div class="slides" id="aboutMe">
+				<h2>About Me</h2>
+				<hr>
+				<div class="slideText">
+					blah blah blah, blah blah, blah blah blah blah!
+				</div>
 			</div>
-		</div>
 
-		<div class="slides" id="work">
-			<h2>My Work</h2>
-		</div>
+			<div class="slides" id="work">
+				<h2>My Work</h2>
+			</div>
 
-		<div class="contact" id="contact">
-			<h3>Contact Me!</h3>
-			<hr>
-			<div class="slideText">
-				1-800-bussitdown @ sickaf.org
+			<div class="contact" id="contact">
+				<h3>Contact Me!</h3>
+				<hr>
+				<div class="slideText">
+					1-800-bussitdown @ sickaf.org
+				</div>
 			</div>
 		</div>
 	</div>
@@ -90,6 +104,19 @@ document.addEventListener("DOMContentLoaded", function(){
 		observer.observe(element);
 	});
 });
+
+function toggleMenu(){
+    var menu = document.getElementById("mobileMenu");
+	var body = document.body;
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+		body.classList.remove('menu-open'); // Remove the menu-open class
+    } else {
+        menu.style.display = "block";
+		body.classList.add('menu-open'); // Add the menu-open class
+    }
+}
 
 </script>
 </html>
