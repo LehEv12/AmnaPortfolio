@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
@@ -40,32 +40,56 @@
 			<h2>Intro</h2>
 			<hr>
 			<div class="slideText">
-				blah blah blah
+				blah, blah blah blah blah. Blah blah!
 			</div>
 		</div>
 
 		<div class="slides" id="aboutMe">
 			<h2>About Me</h2>
 			<hr>
+			<div class="slideText">
+				blah blah blah, blah blah, blah blah blah blah!
+			</div>
 		</div>
 
 		<div class="slides" id="work">
 			<h2>My Work</h2>
 		</div>
 
-		<div class="contact" id="contact">
+		<div class="slides" id="contact">
 			<h3>Contact Me!</h3>
 			<hr>
+			<div class="slideText">
+				1-800-bussitdown @ sickaf.org
+			</div>
 		</div>
 	</div>
 
 </body>
 
 <script>
+
 //scroll to section on page
 function scrollToSection(sectionID){
 	document.getElementById(sectionID).scrollIntoView({behavior: "smooth"});
 }
+
+//text appear as you scroll
+document.addEventListener("DOMContentLoaded", function(){
+	const elements = document.querySelectorAll(".slides, .contact");
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting){
+				entry.target.classList.add("visible");
+			}
+		});
+	});
+
+	elements.forEach((element) => {
+		observer.observe(element);
+	});
+});
 
 </script>
 </html>
