@@ -4,9 +4,9 @@ body {
 }
 
 .picture{
-            width: 100%;
-            max-width: none; /* Allow it to shrink below intrinsic size */
-            height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        max-width: none; /* Allow it to shrink below intrinsic size */
+        height: auto; /* Maintain aspect ratio */
 }
 
 .custom-navbar {
