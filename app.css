@@ -22,6 +22,12 @@ body {
     font-size: 20px;
 }
 
+.custom-col {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .title{
     padding: 5px;
     opacity: 0;
