@@ -4,6 +4,7 @@ body {
 }
 
 .pictureContainer {
+    margin: 5%;
     width: 30vw; /* Relative size for responsiveness */
     height: 30vw; /* Keep height equal to width for a circle */
     max-width: 200px; /* Maximum size limit for larger screens */
@@ -47,6 +48,7 @@ body {
 }
 
 .title{
+    justify-content: center;
     padding: 5px;
     opacity: 0;
     transform: translateY(25px); /* Move content down initially */
