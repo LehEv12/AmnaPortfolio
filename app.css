@@ -48,7 +48,6 @@ body {
 }
 
 .title{
-    display: flex;
     justify-content: center;
     padding: 5px;
     opacity: 0;
