@@ -3,6 +3,11 @@ body {
     text-align: center;
 }
 
+.picture{
+    width: auto;
+    height: autoS;
+}
+
 .custom-navbar {
     background-color: transparent;
     padding: 15px 30px;
