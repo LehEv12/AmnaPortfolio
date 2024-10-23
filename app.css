@@ -1,17 +1,18 @@
 body {
     background-color: #fffffb;
     text-align: center;
+    justify-content: center;
 }
 
 .pictureContainer {
-    margin: 5%;
+    margin: 0 auto;
     width: 30vw; /* Relative size for responsiveness */
     height: 30vw; /* Keep height equal to width for a circle */
     max-width: 200px; /* Maximum size limit for larger screens */
     max-height: 200px; /* Maximum size limit for larger screens */
     overflow: hidden; /* Hide overflow to maintain circular shape */
     border-radius: 50%; /* Create circular shape */
-    display: flex; /* Center the image */
+    display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
 }
@@ -48,6 +49,7 @@ body {
 }
 
 .title{
+    text-align: center;
     justify-content: center;
     padding: 5px;
     opacity: 0;
