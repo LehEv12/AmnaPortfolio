@@ -21,6 +21,8 @@ body {
     max-width: 250px;
     width: 100%;
     object-fit: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .custom-navbar {
