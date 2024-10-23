@@ -15,14 +15,14 @@ body {
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .picture{
     max-width: 250px;
     width: 100%;
     object-fit: cover;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .custom-navbar {
