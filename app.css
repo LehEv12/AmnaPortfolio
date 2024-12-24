@@ -1,7 +1,11 @@
 body {
-    background-color: #fffffb;
+    background-color: #faf6e4;
     text-align: center;
     justify-content: center;
+}
+
+#intro{
+    padding-top: 130px;
 }
 
 .pictureContainer {
@@ -21,14 +25,40 @@ body {
     max-width: 250px;
     width: 100%;
     object-fit: cover;
+    align-items: right;
 }
 
 .custom-navbar {
-    background-color: transparent;
-    padding: 15px 30px;
+    background-color: #faf6e4;
+    position: fixed; /* Make navbar fixed on scroll */
+    top: 0; /* Stick to the top of the screen */
+    left: 0;
+    width: 100%; /* Span the full width of the screen */
+    z-index: 9999; /* Ensure it's above other content */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
-/*Hamburger Menu USE LOGO*/
+.navbar-title{
+    margin-right: auto;
+    font-size: 20px;
+    display: none;
+}
+
+.main-title{
+    margin-top: 160px;
+    font-size: 70px;
+    color: black;
+	font-family: 'Sorts Mill Goudy', serif;
+    padding-bottom: 30px;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+/*Hamburger Menu*/
 .navbar-toggler-icon {
     display: inline-block;
     width: 24px;
@@ -87,19 +117,6 @@ body {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.tablinks {
-    color: black;
-    float: left !important;
-    background: none !important;
-    border: none !important;
-    text-decoration: underline;
-    cursor: pointer;
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-    transition: background-color 0.3s ease;
-}
-
 .menu-open .container{
     margin-right: 15%;
     transition: margin-right 0.3s ease;
@@ -114,7 +131,7 @@ body {
     width: 100%;
     height: 100vh;
     padding: 10px;
-    padding-top: 180px;
+    padding-top: 80px;
 }
 
 .slides{
@@ -123,11 +140,76 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 190px;
     opacity: 0;
     transform: translateY(20px); /* Move content down initially */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.workSlide{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px); /* Move content down initially */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#buttonCarousel{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.carousel-inner{
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    gap: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(-50deg); /* Example for changing color */
+}
+
+.work {
+    text-align: center;
+    border: none;
+    min-width: 250px;
+    max-height: 150px;
+    width: auto;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;                   /* Allow items to grow equally */
+    margin: 10px;             /* Optional: adds space between blocks */
+    color: white;      /* Text color for contrast */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(30px); /* Move content down initially */
+    transition: opacity 0.8s ease-out, box-shadow 0.3s ease, transform 0.8s ease-out;
+}
+
+#work .work:nth-child(1){
+    background: linear-gradient(45deg, #C8A2C8, #FFB6B6); /* Lilac to Light Red */
+}
+
+#work .work:nth-child(2){
+    background: linear-gradient(45deg, #C8A2C8, #A9A9A9); /* Lilac to Light Black (Grayish) */
+}
+
+#work .work:nth-child(3){
+    background: linear-gradient(45deg, #C8A2C8, #FFD580); /* Lilac to Light Orange */
+}
+
+#work .work:nth-child(4){
+    background: linear-gradient(45deg, #C8A2C8, #FFFACD); /* Lilac to Light Yellow */
+}
+
+.work:hover{
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px); /* Slight lift effect */
 }
 
 .contact{
@@ -136,22 +218,14 @@ body {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-h1{
-	color: black;
-	font-family: 'Sorts Mill Goudy', serif;
-	font-size: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
 h2 {
-	color: black;
+	color: #c982c4;
 	font-family: 'Sorts Mill Goudy', serif;
 	font-size: 30px;
 }
 
 h3 {
-    color: black;
+    color: #c993c5;
 }
 
 .slideText{
@@ -180,4 +254,77 @@ hr {
 .visible {
     opacity: 1;
     transform: translateY(0); /* Content comes back to its original position */
+}
+
+
+/* Article Pages */
+.hidden{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.article-content{
+    transform: translateY(20px); /* Move content down initially */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.custom-col-article{
+    max-width: 80%;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.webName{
+    text-align: left;
+}
+
+.back-button{
+    font-size: 20px;
+}
+
+.articleDisplay{
+    margin: auto;
+}
+
+.articleList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust gap as needed */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.articleList li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.articleList a{
+    text-decoration: underline; 
+    color: black; 
+    text-align: center;            
+}
+
+.articlePicture{
+    margin: 0 auto;
+    height: auto;           /* Maintain aspect ratio */
+    width: 100%; /* Relative size for responsiveness */
+    max-width: 200px; /* Maximum size limit for larger screens */
+    max-height: 200px; /* Maximum size limit for larger screens */
+    display: block;
 }
