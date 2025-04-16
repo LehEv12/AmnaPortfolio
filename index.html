@@ -18,9 +18,9 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg custom-navbar-articlePage">
-	        <!-- Back button aligned to the left -->
-	        <button class="btn ms-0 back-button" onclick="backbutton()">Back</button>
-    	</nav>
+        <!-- Back button aligned to the left -->
+        <button class="btn ms-0 back-button" onclick="backbutton()">Back</button>
+    </nav>
 
 	<nav class="navbar navbar-expand-lg custom-navbar">
 		<span class="navbar-title">Amna Faheem</span>
@@ -56,75 +56,63 @@
 
 		<div class="slideContainer">
 			<div class="slides" id="intro">
-				<h2 id="introHead">Introduction</h2>
-				<hr>
-				<div class="slideText">
-					blah, blah blah blah blah. Blah blah!
-				</div>
+			  <h2 id="introHead">Introduction</h2>
+			  <hr>
+			  <div class="slideText">blah, blah blah blah blah. Blah blah!</div>
 			</div>
+			
 			<div class="slides" id="work">
-				<h2 id="workHead">My Work</h2>
-				<hr>
-				<div class="workSlide" id="workCover">
-					<div id="buttonCarousel" class="carousel slides" data-bs-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="d-flex justify-content-around">
-									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageEgypt()">
-										<div class="slider-button" id="content1">
-											EgyptToday
-										</div>
-									</button>
-									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEBlog()">
-										<div class="slider-button" id="content2">
-											REFINE: Blogs							
-										</div>
-									</button>
-									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEMag()">
-										<div class="slider-button" id="content3">
-											REFINE: Magazines							
-										</div>
-									</button>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="d-flex flex-wrap justify-content-around">
-									<button class="col-sm-3 work" onclick="articleDisplayPageStreet()">
-										<div class="slider-button" id="content4">
-											14th Street Magazine							
-										</div>
-									</button>
-								</div>
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#buttonCarousel" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
+			  <h2 id="workHead">My Work</h2>
+			  <hr>
+			  <div class="workSlide" id="workCover">
+				<div id="buttonCarousel" class="carousel slides" data-bs-ride="carousel">
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+					  <div class="d-flex justify-content-around">
+						<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageEgypt()">
+						  <div class="slider-button" id="content1">EgyptToday</div>
 						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#buttonCarousel" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
+						<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEBlog()">
+						  <div class="slider-button" id="content2">REFINE: Blogs</div>
 						</button>
+						<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEMag()">
+						  <div class="slider-button" id="content3">REFINE: Magazines</div>
+						</button>
+					  </div>
 					</div>
+					<div class="carousel-item">
+					  <div class="d-flex flex-wrap justify-content-around">
+						<button class="col-sm-3 work" onclick="articleDisplayPageStreet()">
+						  <div class="slider-button" id="content4">14th Street Magazine</div>
+						</button>
+					  </div>
+					</div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#buttonCarousel" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#buttonCarousel" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
 				</div>
+			  </div>
 			</div>
-
+		  
 			<div class="slides" id="aboutMe">
-				<h2 id="aboutHead">About Me</h2>
-				<hr>
-				<div class="slideText">
-					blah blah blah, blah blah, blah blah blah blah!
-				</div>
+			  <h2 id="aboutHead">About Me</h2>
+			  <hr>
+			  <div class="slideText">blah blah blah, blah blah, blah blah blah blah!</div>
 			</div>
-
+		  
 			<div class="slides" id="contact">
-				<h3 id="contactHead">Contact Me!</h3>
-				<hr>
-				<div class="slideText">
-					1-800-bussitdown @ sickaf.org
-				</div>
+			  <h3 id="contactHead">Contact Me!</h3>
+			  <hr>
+			  <div class="slideText">1-800-bussitdown @ sickaf.org</div>
 			</div>
-		</div>
+		  </div>
+		  
 	</div>
 
 	<div class="col-sm custom-col-article" id="egyptToday">
