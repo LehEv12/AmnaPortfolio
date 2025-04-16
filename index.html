@@ -3,53 +3,48 @@
 <head>
 	<title>Amna's Portfolio</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap 5.3.3 only -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- Your custom stylesheet -->
-	<link rel="stylesheet" href="app.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
 
 	<nav class="navbar navbar-expand-lg custom-navbar-articlePage">
-	        <!-- Back button aligned to the left -->
-	        <button class="btn ms-0 back-button" onclick="backbutton()">Back</button>
-    	</nav>
+        <!-- Back button aligned to the left -->
+        <button class="btn ms-0 back-button" onclick="backbutton()">Back</button>
+    </nav>
 
-	<!-- Start of Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	    <div class="container-fluid">
-	        <!-- Navbar Brand -->
-	        <a class="navbar-brand" href="#">Amna's Portfolio</a>
-	
-	        <!-- Navbar Toggle Button (for small screens) -->
-	        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	            <span class="navbar-toggler-icon"></span>
-	        </button>
-	
-	        <!-- Navbar Links (collapse this for small screens) -->
-	        <div class="collapse navbar-collapse" id="navbarNav">
-	            <ul class="navbar-nav ms-auto">
-	                <li class="nav-item">
-	                    <a class="nav-link active" href="#home">Home</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#about">About</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#services">Services</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#contact">Contact</a>
-	                </li>
-	            </ul>
-	        </div>
-	    </div>
+	<nav class="navbar navbar-expand-lg custom-navbar">
+		<span class="navbar-title">Amna Faheem</span>
+		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <!-- Add ms-auto class to push items to the right -->
+		  <ul class="navbar-nav ms-auto custom-nav-tabs">
+			<li class="nav-item">
+			  <a class="nav-link" onclick="scrollToSectionWithOffset('introHead')">Introduction</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" onclick="scrollToSectionWithOffset('workHead')">Work</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" onclick="scrollToSectionWithOffset('aboutHead')">About Me</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" onclick="scrollToSectionWithOffset('contactHead')">Contact</a>
+			</li>
+		  </ul>
+		</div>
 	</nav>
-	<!-- End of Navbar -->
-
 
 	<div class="col-sm custom-col" id="homepage">
 		<div class="title">
@@ -75,17 +70,17 @@
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="d-flex justify-content-around">
-									<button class="col-sm-3 work" onclick="articleDisplayPageEgypt()">
+									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageEgypt()">
 										<div class="slider-button" id="content1">
 											EgyptToday
 										</div>
 									</button>
-									<button class="col-sm-3 work" onclick="articleDisplayPageREFINEBlog()">
+									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEBlog()">
 										<div class="slider-button" id="content2">
 											REFINE: Blogs							
 										</div>
 									</button>
-									<button class="col-sm-3 work" onclick="articleDisplayPageREFINEMag()">
+									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEMag()">
 										<div class="slider-button" id="content3">
 											REFINE: Magazines							
 										</div>
@@ -93,11 +88,13 @@
 								</div>
 							</div>
 							<div class="carousel-item">
-								<button class="col-sm-3 work" onclick="articleDisplayPageStreet()">
-									<div class="slider-button" id="content4">
-										14th Street Magazine							
-									</div>
-								</button>
+								<div class="d-flex flex-wrap justify-content-around">
+									<button class="col-sm-3 work" onclick="articleDisplayPageStreet()">
+										<div class="slider-button" id="content4">
+											14th Street Magazine							
+										</div>
+									</button>
+								</div>
 							</div>
 						</div>
 						<button class="carousel-control-prev" type="button" data-bs-target="#buttonCarousel" data-bs-slide="prev">
@@ -137,85 +134,85 @@
 			<ul class="articleList">
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/130129/Reasons-for-choosing-Selim-Hassan-as-the-main-character-of">
-						<img class="articlePicture" src="articleimages/egypt14.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt14.jpg"> 
 						<p>"Reasons for choosing Selim Hassan as the main character of Cairo International Book Fair"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129907/Arab-artist-concerts-abroad-in-2024">
-						<img class="articlePicture" src="articleimages/egypt13.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt13.jpg"> 
 						<p>"Arab artist concerts abroad in 2024"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/6/129840/Fashion-Trends-Making-a-Comeback-this-Winter">
-						<img class="articlePicture" src="articleimages/egypt12.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt12.jpg"> 
 						<p>"Fashion Trends Making a Comeback this Winter"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129652/Top-Oscar-2024-nomination-predictions">
-						<img class="articlePicture" src="articleimages/egypt11.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt11.jpg"> 
 						<p>"Top Oscar 2024 nomination predictions"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129687/Palestine-was-strongly-present-in-The-Golden-Globe-2024">
-						<img class="articlePicture" src="articleimages/egypt10.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt10.jpg"> 
 						<p>"Palestine was strongly present in The Golden Globe 2024"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129597/As-Part-Of-UMS-Winter-Drama-Season-ON-TV-to">
-						<img class="articlePicture" src="articleimages/egypt9.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt9.jpg"> 
 						<p>"As Part Of UMS Winter Drama Season, ON TV to Screen ‘Bein El Sotour’ Series"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129593/%E2%80%98Leilet-El-Eid%E2%80%99-movie-is-set-to-be-released-on">
-						<img class="articlePicture" src="articleimages/egypt8.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt8.jpg"> 
 						<p>"‘Leilet El Eid’ movie is set to be released on January 25"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129540/What-You-Need-To-Know-About-Grand-Egyptian-Museum-Soft">
-						<img class="articlePicture" src="articleimages/egypt7.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt7.jpg"> 
 						<p>"What You Need To Know About Grand Egyptian Museum Soft Launch"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129509/Egypt-shines-with-a-bunch-of-glamorous-concerts-in-New">
-						<img class="articlePicture" src="articleimages/egypt6.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt6.jpg"> 
 						<p>"Egypt shines with a bunch of glamorous concerts in New Year Eve"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129487/Movies-coming-out-in-2024">
-						<img class="articlePicture" src="articleimages/egypt5.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt5.jpg"> 
 						<p>"Movies coming out in 2024"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129456/Social-Media-Influences-on-Trends-Culture">
-						<img class="articlePicture" src="articleimages/egypt4.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt4.jpg"> 
 						<p>"Social Media Influences on Trends & Culture"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129446/From-Rap-To-Pop-Egyptian-Songs-Released-in-2023">
-						<img class="articlePicture" src="articleimages/egypt3.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt3.jpg"> 
 						<p>"From Rap To Pop, Egyptian Songs Released in 2023"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129424/Egyptian-Actors-Who-Made-It-In-Hollywood">
-						<img class="articlePicture" src="articleimages/egypt2.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\egypt2.jpg"> 
 						<p>"Egyptian Actors Who Made It In Hollywood"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.egypttoday.com/Article/4/129395/What-Are-The-Top-Music-Albums-In-2023">
-						<img class="articlePicture" src="articleimages/firstarticleimage.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\firstarticleimage.jpg"> 
 						<p>"What Are The Top Music Albums In 2023?"</p>
 					</a>
 				</li>
@@ -230,55 +227,55 @@
 			<ul class="articleList">
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/media-and-movie-costumes">
-						<img class="articlePicture" src="articleimages/barbie+movie.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\barbie+movie.png"> 
 						<p>"Nine Easy Last Minute Media and Movie-Themed Costumes for Halloweekend"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/amnas-ramadan-reflections">
-						<img class="articlePicture" src="articleimages/ramadanreflections.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\-364dCQeg-GvXUG-PX8CheRcnIt3_ejGRrur11m7somSjYuZ8DFLw53G4pLetBQF2odmPEmm_8kddHW0qo2znkZ5-h353nNKocW1F4grcYp3WjIaCNAenyifQMYJ.png"> 
 						<p>"Amna’s Ramadan Reflections"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/between-two-moons-book-review">
-						<img class="articlePicture" src="articleimages/betweentwomoons.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\RISHA+ABDEL+GAWAD.jpg"> 
 						<p>"Between Two Moons Book Review"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/definingsongsinmylife">
-						<img class="articlePicture" src="articleimages/definingsongs.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\aWUaKwyoLR4yXfUNlRMAvKFlFX4LGGTa7sF0nAr2wRL7wD7nRw16QSxf0456cOqtmUExMuot2bWIgGOHFLOsb4StW0hC37XDzC_bHmhj9oKjWi0qKiI5j9mBkW1L.png"> 
 						<p>"Defining Songs in My Life"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/springcleaningtipsandtricks">
-						<img class="articlePicture" src="articleimages/springcleaning.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\xDi7VCvdDLVDn1Thj5TbPjsB1xCUa_E9piVoGAzBweBwaOQYrVl4hlYwXYF8vzeaO-jLlTcwBlrqIA4OUjb4OMBDopZY1u8-YckcZ_Ugc_lfW3pqM3yvBvaYzFOV.jpg"> 
 						<p>"Spring Cleaning Tips and Tricks"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/feeling-sad-this-winter">
-						<img class="articlePicture" src="articleimages/refine default.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\refine default.png"> 
 						<p>"Feeling sad this winter? You're not alone."</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/celebrity-divorces">
-						<img class="articlePicture" src="articleimages/refine default.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\refine default.png"> 
 						<p>"So Everyone’s Getting Divorced. Now What?"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/palestinian-music">
-						<img class="articlePicture" src="articleimages/musicpalestine.jpg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\IMG_4244.jpg"> 
 						<p>"The Importance of Music During Times of Unrest in Palestine"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://www.refinemagazine.com/the-blog/girl-dinner">
-						<img class="articlePicture" src="articleimages/refine default.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\refine default.png"> 
 						<p>"Girl Dinner: Is This New Trend Harmful to Women’s Diets?"</p>
 					</a>
 				</li>
@@ -293,37 +290,37 @@
 			<ul class="articleList">
 				<li class="article-content" type="button">
 					<a href="https://issuu.com/refinemagazine/docs/rhythmissue/11">
-						<img class="articlePicture" src="articleimages/rhythm.webp"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\0db55b753faffbe2b63768075208ccb4.webp"> 
 						<p>"Rhythm of REFINE"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://issuu.com/refinemagazine/docs/distortion_issue/14">
-						<img class="articlePicture" src="articleimages/bannedbooks.webp"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\eb6370c2f573f1623de5eb4748d66855.webp"> 
 						<p>"BANNED BOOKS"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://issuu.com/refinemagazine/docs/refine_magazine_fall_winter_2023-_the_renaissance_/24">
-						<img class="articlePicture" src="articleimages/staplepieces.jpeg"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\3752eff529c5b8c81f98ebc9641d9bce.jpeg"> 
 						<p>"STAPLE PIECES FOR WINTER 2024"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://issuu.com/refinemagazine/docs/rhythmissue/11">
-						<img class="articlePicture" src="articleimages/springfashion.webp"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\page_24_thumb_large.webp"> 
 						<p>"Spring Fashion Inspo"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://issuu.com/refinemagazine/docs/refine_bloom_issue/35">
-						<img class="articlePicture" src="articleimages/piss.webp"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\page_35_thumb_large.webp"> 
 						<p>"Go Piss Girl"</p>
 					</a>
 				</li>
 				<li class="article-content" type="button">
 					<a href="https://issuu.com/refinemagazine/docs/refine_bloom_issue/37">
-						<img class="articlePicture" src="articleimages/thirdplaces.webp"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\page_37_thumb_large.webp"> 
 						<p>"Third Places"</p>
 					</a>
 				</li>
@@ -338,7 +335,7 @@
 			<ul class="articleList">
 				<li class="article-content" type="button">
 					<a href="https://14thstreetmagazine.com/2024/05/09/hed-dispo-inferno/">
-						<img class="articlePicture" src="articleimages/dispoinferno.png"> 
+						<img class="articlePicture" src="C:\Users\evanl\OneDrive\Desktop\Personal Projects\Amna Portfolio\images\Screenshot 2024-12-24 150724.png"> 
 						<p>"Dispo Inferno"</p>
 					</a>
 				</li>
