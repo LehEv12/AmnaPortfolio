@@ -36,7 +36,6 @@ body {
     left: 0;
     width: 100%; /* Span the full width of the screen */
     z-index: 9999; /* Ensure it's above other content */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 }
@@ -168,10 +167,40 @@ body {
     align-items: center;
     padding: 0 80px;
     gap: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.carousel-item{
+    display: inline-block;
+    width: auto;
 }
 
 .carousel-control-prev, .carousel-control-next{
     filter: invert(1) sepia(1) saturate(5) hue-rotate(-50deg); /* Example for changing color */
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 767px) {
+    /* Hide the carousel on mobile */
+    #buttonCarousel {
+        display: none;
+    }
+
+    /* Display a vertical list instead of the carousel */
+    .workSlide {
+        display: block;
+    }
+
+    .workSlide .d-flex {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .workSlide button {
+        margin-bottom: 1rem; /* Add space between buttons */
+        width: 100%; /* Make buttons take up full width on mobile */
+    }
 }
 
 .work {
