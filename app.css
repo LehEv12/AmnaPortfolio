@@ -181,25 +181,27 @@ body {
     filter: invert(1) sepia(1) saturate(5) hue-rotate(-50deg); /* Example for changing color */
 }
 
-/* For smaller screens (mobile) */
+/* Mobile styles */
 @media (max-width: 767px) {
     /* Hide the carousel on mobile */
     #buttonCarousel {
         display: none;
     }
 
-    /* Display a vertical list instead of the carousel */
-    .workSlide {
-        display: block;
-    }
-
+    /* Switch to a vertical list for mobile */
     .workSlide .d-flex {
-        flex-direction: column; /* Stack items vertically */
+        display: block; /* Stack items vertically */
+        flex-direction: column;
     }
 
     .workSlide button {
-        margin-bottom: 1rem; /* Add space between buttons */
-        width: 100%; /* Make buttons take up full width on mobile */
+        margin-bottom: 1rem; /* Space out the buttons */
+        width: 100%; /* Make buttons full width */
+    }
+
+    /* Show the buttons as a vertical list on mobile */
+    .workSlide {
+        display: block;
     }
 }
 
