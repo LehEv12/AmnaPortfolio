@@ -55,57 +55,62 @@
 		</div>
 
 		<div class="slideContainer">
-			<div class="slides" id="intro">
-				<h2 id="introHead">Introduction</h2>
-				<hr>
-				<div class="slideText">
-					blah, blah blah blah blah. Blah blah!
-				</div>
-			</div>
 			<div class="slides" id="work">
 				<h2 id="workHead">My Work</h2>
 				<hr>
-				<div class="workSlide" id="workCover">
-					<div id="buttonCarousel" class="carousel slides" data-bs-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="d-flex justify-content-around">
-									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageEgypt()">
-										<div class="slider-button" id="content1">
-											EgyptToday
-										</div>
-									</button>
-									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEBlog()">
-										<div class="slider-button" id="content2">
-											REFINE: Blogs							
-										</div>
-									</button>
-									<button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEMag()">
-										<div class="slider-button" id="content3">
-											REFINE: Magazines							
-										</div>
-									</button>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="d-flex flex-wrap justify-content-around">
-									<button class="col-sm-3 work" onclick="articleDisplayPageStreet()">
-										<div class="slider-button" id="content4">
-											14th Street Magazine							
-										</div>
-									</button>
-								</div>
-							</div>
+			  
+				<!-- Desktop/Tablet Carousel -->
+				<div class="d-none d-sm-block">
+				  <div class="carousel slides" id="buttonCarousel" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<div class="d-flex justify-content-around">
+						  <button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageEgypt()">
+							<div class="slider-button" id="content1">EgyptToday</div>
+						  </button>
+						  <button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEBlog()">
+							<div class="slider-button" id="content2">REFINE: Blogs</div>
+						  </button>
+						  <button class="col-12 col-sm-3 work mb-2" onclick="articleDisplayPageREFINEMag()">
+							<div class="slider-button" id="content3">REFINE: Magazines</div>
+						  </button>
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#buttonCarousel" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#buttonCarousel" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
+					  </div>
+					  <div class="carousel-item">
+						<div class="d-flex flex-wrap justify-content-around">
+						  <button class="col-sm-3 work" onclick="articleDisplayPageStreet()">
+							<div class="slider-button" id="content4">14th Street Magazine</div>
+						  </button>
+						</div>
+					  </div>
 					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#buttonCarousel" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#buttonCarousel" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+				</div>
+			  
+				<!-- Mobile Vertical Button List -->
+				<div class="d-block d-sm-none">
+				  <div class="d-flex flex-column align-items-center">
+					<button class="work mb-2" onclick="articleDisplayPageEgypt()">
+					  <div class="slider-button">EgyptToday</div>
+					</button>
+					<button class="work mb-2" onclick="articleDisplayPageREFINEBlog()">
+					  <div class="slider-button">REFINE: Blogs</div>
+					</button>
+					<button class="work mb-2" onclick="articleDisplayPageREFINEMag()">
+					  <div class="slider-button">REFINE: Magazines</div>
+					</button>
+					<button class="work mb-2" onclick="articleDisplayPageStreet()">
+					  <div class="slider-button">14th Street Magazine</div>
+					</button>
+				  </div>
 				</div>
 			</div>
 
